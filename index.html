@@ -1,4 +1,220 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Promo RPM Alfamidi Gunung Tua</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Segoe UI,Arial;
+background:linear-gradient(135deg,#ff0000,#ff7b00,#ff0000);
+background-size:400% 400%;
+animation:bgmove 10s infinite alternate;
+}
+
+@keyframes bgmove{
+0%{background-position:left;}
+100%{background-position:right;}
+}
+
+header{
+text-align:center;
+color:white;
+padding:30px;
+animation:fadeDown 1s;
+}
+
+@keyframes fadeDown{
+from{opacity:0;transform:translateY(-30px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+h1{
+margin:0;
+font-size:28px;
+}
+
+.container{
+padding:15px;
+}
+
+.btn{
+display:block;
+text-align:center;
+background:white;
+color:red;
+padding:15px;
+border-radius:12px;
+font-weight:bold;
+margin-bottom:15px;
+text-decoration:none;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+transition:0.3s;
+}
+
+.btn:hover{
+transform:scale(1.05);
+background:#ffecec;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:15px;
+}
+
+.card{
+background:white;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,0.4);
+cursor:pointer;
+transform:scale(0.9);
+animation:fadeUp 0.8s forwards;
+}
+
+.card:hover{
+transform:scale(1.05);
+box-shadow:0 15px 35px rgba(0,0,0,0.6);
+}
+
+.card img{
+width:100%;
+display:block;
+}
+
+@keyframes fadeUp{
+to{
+opacity:1;
+transform:scale(1);
+}
+}
+
+footer{
+text-align:center;
+color:white;
+padding:20px;
+font-weight:bold;
+}
+
+/* popup */
+
+#popup{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.95);
+justify-content:center;
+align-items:center;
+animation:fadeIn 0.3s;
+}
+
+#popup img{
+max-width:95%;
+max-height:95%;
+border-radius:15px;
+}
+
+@keyframes fadeIn{
+from{opacity:0;}
+to{opacity:1;}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>🔥 PROMO RPM ALFAMIDI 🔥</h1>
+
+<p>Gunung Tua AF85-GTA | 2–8 Februari 2026</p>
+
+</header>
+
+
+<div class="container">
+
+<a href="assets/RPM-2-8-Februari-2026.pdf" class="btn">
+⬇ DOWNLOAD KATALOG PDF
+</a>
+
+<div class="grid">
+
+<div class="card">
+<img src="assets/page_1.png">
+</div>
+
+<div class="card">
+<img src="assets/page_2.png">
+</div>
+
+<div class="card">
+<img src="assets/page_3.png">
+</div>
+
+<div class="card">
+<img src="assets/page_4.png">
+</div>
+
+<div class="card">
+<img src="assets/page_5.png">
+</div>
+
+</div>
+
+</div>
+
+
+<footer>
+
+© 2026 Alfamidi Gunung Tua AF85-GTA
+
+</footer>
+
+
+<div id="popup">
+<img id="popup-img">
+</div>
+
+
+<script>
+
+let popup=document.getElementById("popup");
+let popupImg=document.getElementById("popup-img");
+
+document.querySelectorAll(".card img").forEach(img=>{
+
+img.onclick=function(){
+
+popup.style.display="flex";
+
+popupImg.src=this.src;
+
+}
+
+});
+
+popup.onclick=function(){
+
+popup.style.display="none";
+
+}
+
+</script>
+
+
+</body>
+</html>
 <!DOCTYPE html>
 <html lang="id">
 <head>
